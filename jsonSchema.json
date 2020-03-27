@@ -1,0 +1,63 @@
+{
+  "title": "Formulário Pessoal",
+  "type": "object",
+  "properties": {
+    "Você tem algum animal de estimação": {
+      "type": "string",
+      "enum": [
+        "Não",
+        "Sim: Um",
+        "Sim: mais de um"
+      ],
+      "default": "Não"
+    }
+  },
+  "required": [
+    "Você tem algum animal de estimação"
+  ],
+  "dependencies": {
+    "Você tem algum animal de estimação": {
+      "oneOf": [
+        {
+          "properties": {
+            "Você tem algum animal de estimação": {
+              "enum": [
+                "Não"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "Você tem algum animal de estimação": {
+              "enum": [
+                "Sim: Um"
+              ]
+            },
+           "Qual a idade do seu animal de estimação?": {
+              "type": "number"
+            }
+          },
+          "required": [
+           "Qual a idade do seu animal de estimação?"
+          ]
+        },
+        {
+          "properties": {
+            "Você tem algum animal de estimação": {
+              "enum": [
+                "Sim: mais de um"
+              ]
+            },
+            "Você quer doar algum?": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "Você quer doar algum?"
+          ]
+        }
+      ]
+    }
+  }
+}

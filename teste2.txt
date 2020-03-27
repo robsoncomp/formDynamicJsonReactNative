@@ -1,0 +1,51 @@
+quesao1:{title: "Nome", type: "string", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: 50, TamanhoDecimal: null, Obrigatorio: true, CampoPaiID: null },
+quesao1:{title: "Idade", type: "INT", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: 2, TamanhoDecimal: null, Obrigatorio: true, CampoPaiID: null },
+quesao1:{title: "Sexo", type: "INT", OpcoesLista: "Sexo", ListaValor: "SexoID", ListaTexto: "Descricao", TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: true, CampoPaiID: null },
+quesao1:{title: "Esporte(s) Favorito(s)", type: null, OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: true, CampoPaiID: null },
+quesao1:{title: "Futebol", type: "BIT", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: false, CampoPaiID: 4 },
+quesao1:{title: "Basquete", type: "BIT", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: false, CampoPaiID: 4 },
+quesao1:{title: "Volei", type: "BIT", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: false, CampoPaiID: 4 },
+quesao1:{title: "Natação", type: "BIT", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: false, CampoPaiID: 4 },
+quesao1:{title: "Corrida", type: "BIT", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: false, CampoPaiID: 4 },
+quesao1:{title: "Outro", type: null, OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: null, TamanhoDecimal: null, Obrigatorio: false, CampoPaiID: 4 },
+quesao1:{title: null, type: "string", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoLimite: 100, TamanhoDecimal: null, Obrigatorio: false, CampoPaiID: 10 },
+quesao1:{title: "Pratica algum destes regularmente?", type: "BIT", OpcoesLista: null, ListaValor: null, ListaTexto: null, TamanhoDecimal: null, TamanhoLimite: null, Obrigatorio: true, CampoPaiID: null },
+		
+
+  type: 'object',
+  required: ['name', 'region'],
+  title: 'Create Wallet',
+  properties: {
+    name: {
+      title: 'Name',
+      type: 'string',
+    },
+    teste: {
+      title: 'Name',
+      type: 'string',
+    },
+    region: {
+      title: 'Region',
+      type: 'string',
+      enum: ['0000', '0001', '0002'],
+    },
+    bank: {
+      title: 'Bank',
+      type: 'string',
+      enum: [
+        {
+          id: 1,
+          name: 'First',
+        },
+        {
+          id: 2,
+          name: 'Second',
+        },
+        {
+          id: 3,
+          name: 'Third',
+        },
+      ],
+      isObject: true,
+    },
+  },
